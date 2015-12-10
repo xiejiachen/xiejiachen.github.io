@@ -6,37 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="a statistic dog">
-    <title>如何用 $R$ 读取数据 - a statistic dog</title>
+    <title>如何用 $R$ 读取数据和数据交互 - a statistic dog</title>
     <meta name="author" content="五三模拟比英语周报更适合垫锅">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="R自带了一些读取数据的function, 你可以直接调用。如：
-
-
-read.table
-read.csv
-read.csv2">
+    <meta name="description" content="R自带了一些可以直接调用的函数，可以用来读取数据。如： read.table read.csv read.csv2">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="如何用 $R$ 读取数据">
+<meta property="og:title" content="如何用 $R$ 读取数据和数据交互">
 <meta property="og:url" content="http://yoursite.com/2015/12/10/readdata/index.html">
 <meta property="og:site_name" content="a statistic dog">
-<meta property="og:description" content="R自带了一些读取数据的function, 你可以直接调用。如：
-
-
-read.table
-read.csv
-read.csv2">
-<meta property="og:updated_time" content="2015-12-10T22:33:28.000Z">
+<meta property="og:description" content="R自带了一些可以直接调用的函数，可以用来读取数据。如： read.table read.csv read.csv2">
+<meta property="og:updated_time" content="2015-12-10T23:46:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何用 $R$ 读取数据">
-<meta name="twitter:description" content="R自带了一些读取数据的function, 你可以直接调用。如：
-
-
-read.table
-read.csv
-read.csv2">
+<meta name="twitter:title" content="如何用 $R$ 读取数据和数据交互">
+<meta name="twitter:description" content="R自带了一些可以直接调用的函数，可以用来读取数据。如： read.table read.csv read.csv2">
 <meta name="twitter:creator" content="@五三模拟比英语周报更适合垫锅">
     
     
@@ -207,7 +192,7 @@ read.csv2">
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            如何用 $R$ 读取数据
+            如何用 $R$ 读取数据和数据交互
         </h1>
     
     <div class="post-meta">
@@ -228,17 +213,7 @@ read.csv2">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <hr>
-<p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
-<blockquote>
-<ul>
-<li>read.table</li>
-<li>read.csv</li>
-<li>read.csv2</li>
-</ul>
-</blockquote>
-<hr>
-<a id="more"></a>
+            <p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
 <h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="u53C2_u6570_u8BF4_u660E_3A"><a href="#u53C2_u6570_u8BF4_u660E_3A" class="headerlink" title="<strong>参数说明</strong>:"></a><strong>参数说明</strong>:</h4><ul>
 <li>file: 文件来源，名字，链接，或计算机的存储路径</li>
@@ -257,14 +232,13 @@ read.csv2">
 <hr>
 <h2 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h2><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
-<p>####openfile 参数</p>
-<ul>
+<h4 id="openfile__u53C2_u6570"><a href="#openfile__u53C2_u6570" class="headerlink" title="openfile 参数"></a>openfile 参数</h4><ul>
 <li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>
 <li>“w”覆写: 删除原来的数据， 并重新写如</li>
 <li>“a” :    在文件的最后写</li>
 </ul>
 <p>这个语法与 python, c++类似。</p>
-<p>注意每次打开数据都要记得加close,避免造成数据错误。</p>
+<p>注意每次打开数据都要记得使用close关闭它, 因为打开以后是存储在内存中的，不关闭可能造成数据错误。</p>
 <p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/R1_readdata" target="_blank" rel="external">访问我的github查看代码例子</a></p>
 
             
@@ -278,7 +252,7 @@ read.csv2">
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">标签</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/R/">R</a> <a class="tag tag--primary tag--small t-link" href="/tags/读取数据/">读取数据</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/R/">R</a> <a class="tag tag--primary tag--small t-link" href="/tags/数据交互/">数据交互</a> <a class="tag tag--primary tag--small t-link" href="/tags/读取数据/">读取数据</a>
 
             </div>
         
@@ -287,7 +261,7 @@ read.csv2">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/R-获取子集/"  data-tooltip="$R$ 获取子集">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -368,7 +342,7 @@ read.csv2">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/R-获取子集/"  data-tooltip="$R$ 获取子集">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>

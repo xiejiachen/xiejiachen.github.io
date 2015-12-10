@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-10T22:33:28.000Z</updated>
+  <updated>2015-12-10T23:44:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,22 +15,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[如何用 $R$ 读取数据]]></title>
+    <title><![CDATA[$R$ 获取子集]]></title>
+    <link href="http://yoursite.com/2015/12/10/R-%E8%8E%B7%E5%8F%96%E5%AD%90%E9%9B%86/"/>
+    <id>http://yoursite.com/2015/12/10/R-获取子集/</id>
+    <published>2015-12-10T22:45:03.000Z</published>
+    <updated>2015-12-10T23:44:14.000Z</updated>
+    <content type="html"><![CDATA[<p>想象一下，如果你只想研究数据中的部分数据。比如从我们的<a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">练习数据</a>中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。</p>
+<a id="more"></a>
+<h3 id="u5B50_u96C6"><a href="#u5B50_u96C6" class="headerlink" title="子集"></a>子集</h3><h4 id="1-_subset__u51FD_u6570"><a href="#1-_subset__u51FD_u6570" class="headerlink" title="1. <strong>subset</strong> 函数"></a>1. <strong>subset</strong> 函数</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subset(x, subset, select)</span><br></pre></td></tr></table></figure>
+<p>可以使用subset函数获取子集</p>
+<h5 id="u53C2_u6570_u8BF4_u660E"><a href="#u53C2_u6570_u8BF4_u660E" class="headerlink" title="参数说明"></a>参数说明</h5><ul>
+<li>x: 数据名/ dataframe</li>
+<li>subset: 限制条件</li>
+<li>select: 选取行或列</li>
+</ul>
+<p>比如要找出 ozone大于31且Temp大于90时, Soloar的平均值。<br>可以使用<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data&lt;-read.csv(<span class="string">"subsetdata.csv"</span>)</span><br><span class="line">summary(subset(data, Ozone&gt;<span class="number">31</span>&amp;Temp&gt;<span class="number">90</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-__u4F7F_u7528_5B_5D_u8868_u793A_u5B50_u96C6"><a href="#2-__u4F7F_u7528_5B_5D_u8868_u793A_u5B50_u96C6" class="headerlink" title="2. 使用[]表示子集"></a>2. 使用[]表示子集</h4><p>注意在一个data.frame使用[]表示一个dataframe。<br>[[]]表示vector.<br>data.frame与vector的区别：vector中的变量必须是同一数据类型。</p>
+<p>回到刚才的问题，如果想找出5月份ozone的最大值，我们可以：<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">summary(data[data$Month == <span class="number">5</span>,])</span><br></pre></td></tr></table></figure></p>
+<pre><code>data[data$Month == 5,] 表示月份等于5的子集。
+</code></pre><p>注意：这里我不用<strong>mean</strong>函数的原因是，<strong>mean</strong>函数必须是同一个数据类型。而这里数据中含有NA,使用mean函数会报错。而<strong>summary</strong>函数只会计算完整的数据类型。</p>
+<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">访问我的github下载练习数据和代码</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>想象一下，如果你只想研究数据中的部分数据。比如从我们的<a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset">练习数据</a>中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。</p>]]>
+    
+    </summary>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="子集" scheme="http://yoursite.com/tags/%E5%AD%90%E9%9B%86/"/>
+    
+      <category term="R" scheme="http://yoursite.com/categories/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[如何用 $R$ 读取数据和数据交互]]></title>
     <link href="http://yoursite.com/2015/12/10/readdata/"/>
     <id>http://yoursite.com/2015/12/10/readdata/</id>
     <published>2015-12-10T22:18:55.000Z</published>
-    <updated>2015-12-10T22:33:28.000Z</updated>
-    <content type="html"><![CDATA[<hr>
-<p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
-<blockquote>
-<ul>
-<li>read.table</li>
-<li>read.csv</li>
-<li>read.csv2</li>
-</ul>
-</blockquote>
-<hr>
-<a id="more"></a>
+    <updated>2015-12-10T23:46:37.000Z</updated>
+    <content type="html"><![CDATA[<p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
 <h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="u53C2_u6570_u8BF4_u660E_3A"><a href="#u53C2_u6570_u8BF4_u660E_3A" class="headerlink" title="<strong>参数说明</strong>:"></a><strong>参数说明</strong>:</h4><ul>
 <li>file: 文件来源，名字，链接，或计算机的存储路径</li>
@@ -49,31 +74,23 @@
 <hr>
 <h2 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h2><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
-<p>####openfile 参数</p>
-<ul>
+<h4 id="openfile__u53C2_u6570"><a href="#openfile__u53C2_u6570" class="headerlink" title="openfile 参数"></a>openfile 参数</h4><ul>
 <li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>
 <li>“w”覆写: 删除原来的数据， 并重新写如</li>
 <li>“a” :    在文件的最后写</li>
 </ul>
 <p>这个语法与 python, c++类似。</p>
-<p>注意每次打开数据都要记得加close,避免造成数据错误。</p>
+<p>注意每次打开数据都要记得使用close关闭它, 因为打开以后是存储在内存中的，不关闭可能造成数据错误。</p>
 <p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/R1_readdata" target="_blank" rel="external">访问我的github查看代码例子</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<hr>
-<p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
-<blockquote>
-<ul>
-<li>read.table</li>
-<li>read.csv</li>
-<li>read.csv2</li>
-</ul>
-</blockquote>
-<hr>]]>
+    <![CDATA[<p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br>]]>
     
     </summary>
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="数据交互" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/"/>
     
       <category term="读取数据" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
     
