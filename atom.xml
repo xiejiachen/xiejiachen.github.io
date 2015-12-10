@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-10T22:29:28.000Z</updated>
+  <updated>2015-12-10T22:33:28.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[用R 读取数据]]></title>
+    <title><![CDATA[如何用 $R$ 读取数据]]></title>
     <link href="http://yoursite.com/2015/12/10/readdata/"/>
     <id>http://yoursite.com/2015/12/10/readdata/</id>
     <published>2015-12-10T22:18:55.000Z</published>
-    <updated>2015-12-10T22:29:28.000Z</updated>
+    <updated>2015-12-10T22:33:28.000Z</updated>
     <content type="html"><![CDATA[<hr>
 <p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
 <blockquote>
@@ -57,7 +57,8 @@
 </ul>
 <p>这个语法与 python, c++类似。</p>
 <p>注意每次打开数据都要记得加close,避免造成数据错误。</p>
-<h3 id="u8BBF_u95EE_u6211_u7684github_u67E5_u770B_u4EE3_u7801_u4F8B_u5B50_u6233_u8FD9_u76F4_u98DE"><a href="#u8BBF_u95EE_u6211_u7684github_u67E5_u770B_u4EE3_u7801_u4F8B_u5B50_u6233_u8FD9_u76F4_u98DE" class="headerlink" title="<a href=" https:="" github.com="" xiejiachen="" r-python-codewithmyweb="" tree="" master="" r="" r1_readdata"="">访问我的github查看代码例子戳这直飞</a>"><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/R1_readdata" target="_blank" rel="external">访问我的github查看代码例子戳这直飞</a></h3>]]></content>
+<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/R1_readdata" target="_blank" rel="external">访问我的github查看代码例子</a></p>
+]]></content>
     <summary type="html">
     <![CDATA[<hr>
 <p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
