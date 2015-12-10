@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-09T17:10:10.000Z</updated>
+  <updated>2015-12-10T22:29:28.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,77 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[用R 读取数据]]></title>
+    <link href="http://yoursite.com/2015/12/10/readdata/"/>
+    <id>http://yoursite.com/2015/12/10/readdata/</id>
+    <published>2015-12-10T22:18:55.000Z</published>
+    <updated>2015-12-10T22:29:28.000Z</updated>
+    <content type="html"><![CDATA[<hr>
+<p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
+<blockquote>
+<ul>
+<li>read.table</li>
+<li>read.csv</li>
+<li>read.csv2</li>
+</ul>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="u53C2_u6570_u8BF4_u660E_3A"><a href="#u53C2_u6570_u8BF4_u660E_3A" class="headerlink" title="<strong>参数说明</strong>:"></a><strong>参数说明</strong>:</h4><ul>
+<li>file: 文件来源，名字，链接，或计算机的存储路径</li>
+<li>Header:   第一行是否包含变量名， TRUE 包含，FALSE不包含</li>
+<li>sep :   数字之间用什么分隔, 默认值为sep=” “。比如，在读取数据时，8 9表示两个数字。若数据文件中使用逗号分隔数字，如8,9 则需使sep=”,”</li>
+<li>Dec:  小数点表示方法。 </li>
+<li>colClasses: 表示每列的类，比如你可以指定第一列是logistical, 第二列是factor，第三列是integer。设置colClasses的好处是可以节约计算机的内存，不然R会边读取边计算。 在处理大样本时有必要设置来提高效率。</li>
+<li>comment.char：表明文件中用于注释的字符，读取时会跳过注释符号后的行</li>
+<li>skip： 跳过。 有时文件开头有一些不需要的数据或文字，可以指定skip跳过这些行，然后从那里读取数据。</li>
+<li>stringsAsFactors： 读取数据时遇到字符串的处理办法。 TRUE表示自动将那一列作为factor, false表示为字符串。</li>
+</ul>
+<p>读取数据时，不填写参数表示使用默认值。</p>
+<p>R还有一些默认的其它的读取命令:如 <strong>read.csv, read.csv2</strong><br>CSV(Comma Separated Value): 表示用逗号分隔的数据。<br>这里<strong>read.csv</strong>，<strong>read.csv2</strong> 与<strong>read.table</strong>几乎是一样的，可以通过填写参数使他们达到同样的效果区别是默认参数值。</p>
+<h4 id="read-csv"><a href="#read-csv" class="headerlink" title="<strong>read.csv</strong>"></a><strong>read.csv</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv(file, header = <span class="literal">TRUE</span>, sep = <span class="string">","</span> , dec = <span class="string">"."</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="read-csv2"><a href="#read-csv2" class="headerlink" title="<strong>read.csv2</strong>"></a><strong>read.csv2</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv2(file, header = <span class="literal">TRUE</span>, sep = <span class="string">";"</span>, dec = <span class="string">","</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h2><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
+<p>####openfile 参数</p>
+<ul>
+<li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>
+<li>“w”覆写: 删除原来的数据， 并重新写如</li>
+<li>“a” :    在文件的最后写</li>
+</ul>
+<p>这个语法与 python, c++类似。</p>
+<p>注意每次打开数据都要记得加close,避免造成数据错误。</p>
+<h3 id="u8BBF_u95EE_u6211_u7684github_u67E5_u770B_u4EE3_u7801_u4F8B_u5B50_u6233_u8FD9_u76F4_u98DE"><a href="#u8BBF_u95EE_u6211_u7684github_u67E5_u770B_u4EE3_u7801_u4F8B_u5B50_u6233_u8FD9_u76F4_u98DE" class="headerlink" title="<a href=" https:="" github.com="" xiejiachen="" r-python-codewithmyweb="" tree="" master="" r="" r1_readdata"="">访问我的github查看代码例子戳这直飞</a>"><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/R1_readdata" target="_blank" rel="external">访问我的github查看代码例子戳这直飞</a></h3>]]></content>
+    <summary type="html">
+    <![CDATA[<hr>
+<p>R自带了一些读取数据的function, 你可以直接调用。<br>如：</p>
+<blockquote>
+<ul>
+<li>read.table</li>
+<li>read.csv</li>
+<li>read.csv2</li>
+</ul>
+</blockquote>
+<hr>]]>
+    
+    </summary>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="读取数据" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="R" scheme="http://yoursite.com/categories/R/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Welcome to Statistic Dog Home]]></title>
     <link href="http://yoursite.com/2015/12/09/test/"/>
     <id>http://yoursite.com/2015/12/09/test/</id>
-    <published>2015-12-09T17:10:10.000Z</published>
-    <updated>2015-12-09T17:10:10.000Z</updated>
+    <published>2015-12-09T17:34:15.000Z</published>
+    <updated>2015-12-09T17:34:15.000Z</updated>
     <content type="html"><![CDATA[<p>－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。<br><a id="more"></a></p>
 ]]></content>
     <summary type="html">
