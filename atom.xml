@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-11T02:16:50.000Z</updated>
+  <updated>2015-12-11T02:20:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/11/R-%E5%BE%AA%E7%8E%AF/"/>
     <id>http://yoursite.com/2015/12/11/R-循环/</id>
     <published>2015-12-11T01:54:23.000Z</published>
-    <updated>2015-12-11T02:16:50.000Z</updated>
+    <updated>2015-12-11T02:20:02.000Z</updated>
     <content type="html"><![CDATA[<p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br><a id="more"></a><br><!-- toc --></p>
 <h2 id="If__u5FAA_u73AF"><a href="#If__u5FAA_u73AF" class="headerlink" title="If 循环"></a>If 循环</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">If(condition)&#123;</span><br><span class="line"><span class="comment">##do something&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="if-else"><a href="#if-else" class="headerlink" title="if.else"></a>if.else</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">If(condition) &#123;</span><br><span class="line">   <span class="comment">##do something</span></span><br><span class="line">&#125;Else&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -36,6 +36,12 @@
     <![CDATA[<p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br>]]>
     
     </summary>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="循环" scheme="http://yoursite.com/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+      <category term="R" scheme="http://yoursite.com/categories/R/"/>
     
   </entry>
   
