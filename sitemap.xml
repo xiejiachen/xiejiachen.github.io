@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.xiejiachen.xyz/2015/12/11/test/</loc>
+    <lastmod>2015-12-11T23:27:40.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.xiejiachen.xyz/2015/12/10/readdata/</loc>
     <lastmod>2015-12-11T03:45:23.000Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://www.xiejiachen.xyz/guestbooks/index.html</loc>
     <lastmod>2015-12-10T22:43:24.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.xiejiachen.xyz/2015/12/11/test/</loc>
-    <lastmod>2015-12-09T17:34:15.000Z</lastmod>
   </url>
   
   <url>
