@@ -3,9 +3,9 @@
   <title><![CDATA[a statistic dog]]></title>
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://xiejiachen.xyz/"/>
+  <link href="http://www.xiejiachen.xyz/"/>
   <updated>2015-12-09T17:34:15.000Z</updated>
-  <id>http://xiejiachen.xyz/</id>
+  <id>http://www.xiejiachen.xyz/</id>
   
   <author>
     <name><![CDATA[五三模拟比英语周报更适合垫锅]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Welcome to Statistic Dog Home]]></title>
-    <link href="http://xiejiachen.xyz/2015/12/11/test/"/>
-    <id>http://xiejiachen.xyz/2015/12/11/test/</id>
+    <link href="http://www.xiejiachen.xyz/2015/12/11/test/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/11/test/</id>
     <published>2015-12-11T08:47:37.000Z</published>
     <updated>2015-12-09T17:34:15.000Z</updated>
     <content type="html"><![CDATA[<p>－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。<br><a id="more"></a></p>
@@ -27,20 +27,20 @@
     
     </summary>
     
-      <category term="University of York" scheme="http://xiejiachen.xyz/tags/University-of-York/"/>
+      <category term="University of York" scheme="http://www.xiejiachen.xyz/tags/University-of-York/"/>
     
-      <category term="约克大学" scheme="http://xiejiachen.xyz/tags/%E7%BA%A6%E5%85%8B%E5%A4%A7%E5%AD%A6/"/>
+      <category term="约克大学" scheme="http://www.xiejiachen.xyz/tags/%E7%BA%A6%E5%85%8B%E5%A4%A7%E5%AD%A6/"/>
     
-      <category term="网站介绍" scheme="http://xiejiachen.xyz/tags/%E7%BD%91%E7%AB%99%E4%BB%8B%E7%BB%8D/"/>
+      <category term="网站介绍" scheme="http://www.xiejiachen.xyz/tags/%E7%BD%91%E7%AB%99%E4%BB%8B%E7%BB%8D/"/>
     
-      <category term="写在前面" scheme="http://xiejiachen.xyz/categories/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/"/>
+      <category term="写在前面" scheme="http://www.xiejiachen.xyz/categories/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[$R$ 循环]]></title>
-    <link href="http://xiejiachen.xyz/2015/12/11/R-%E5%BE%AA%E7%8E%AF/"/>
-    <id>http://xiejiachen.xyz/2015/12/11/R-循环/</id>
+    <link href="http://www.xiejiachen.xyz/2015/12/11/R-%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/11/R-循环/</id>
     <published>2015-12-11T01:54:23.000Z</published>
     <updated>2015-12-11T02:20:02.000Z</updated>
     <content type="html"><![CDATA[<p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br><a id="more"></a><br><!-- toc --></p>
@@ -60,18 +60,18 @@
     
     </summary>
     
-      <category term="R" scheme="http://xiejiachen.xyz/tags/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/tags/R/"/>
     
-      <category term="循环" scheme="http://xiejiachen.xyz/tags/%E5%BE%AA%E7%8E%AF/"/>
+      <category term="循环" scheme="http://www.xiejiachen.xyz/tags/%E5%BE%AA%E7%8E%AF/"/>
     
-      <category term="R" scheme="http://xiejiachen.xyz/categories/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/categories/R/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[$R$ 获取子集]]></title>
-    <link href="http://xiejiachen.xyz/2015/12/10/R-%E8%8E%B7%E5%8F%96%E5%AD%90%E9%9B%86/"/>
-    <id>http://xiejiachen.xyz/2015/12/10/R-获取子集/</id>
+    <link href="http://www.xiejiachen.xyz/2015/12/10/R-%E8%8E%B7%E5%8F%96%E5%AD%90%E9%9B%86/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/10/R-获取子集/</id>
     <published>2015-12-10T22:45:03.000Z</published>
     <updated>2015-12-11T01:33:05.000Z</updated>
     <content type="html"><![CDATA[<p>想象一下，如果你只想研究数据中的部分数据。比如从我们的<a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">练习数据</a>中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。</p>
@@ -96,18 +96,18 @@
     
     </summary>
     
-      <category term="R" scheme="http://xiejiachen.xyz/tags/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/tags/R/"/>
     
-      <category term="子集" scheme="http://xiejiachen.xyz/tags/%E5%AD%90%E9%9B%86/"/>
+      <category term="子集" scheme="http://www.xiejiachen.xyz/tags/%E5%AD%90%E9%9B%86/"/>
     
-      <category term="R" scheme="http://xiejiachen.xyz/categories/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/categories/R/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何用 $R$ 读取数据和数据交互]]></title>
-    <link href="http://xiejiachen.xyz/2015/12/10/readdata/"/>
-    <id>http://xiejiachen.xyz/2015/12/10/readdata/</id>
+    <link href="http://www.xiejiachen.xyz/2015/12/10/readdata/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/10/readdata/</id>
     <published>2015-12-10T22:18:55.000Z</published>
     <updated>2015-12-11T03:45:23.000Z</updated>
     <content type="html"><![CDATA[<p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
@@ -144,13 +144,13 @@
     
     </summary>
     
-      <category term="R" scheme="http://xiejiachen.xyz/tags/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/tags/R/"/>
     
-      <category term="数据交互" scheme="http://xiejiachen.xyz/tags/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/"/>
+      <category term="数据交互" scheme="http://www.xiejiachen.xyz/tags/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/"/>
     
-      <category term="读取数据" scheme="http://xiejiachen.xyz/tags/%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+      <category term="读取数据" scheme="http://www.xiejiachen.xyz/tags/%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="R" scheme="http://xiejiachen.xyz/categories/R/"/>
+      <category term="R" scheme="http://www.xiejiachen.xyz/categories/R/"/>
     
   </entry>
   
