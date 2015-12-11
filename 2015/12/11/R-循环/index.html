@@ -6,22 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="a statistic dog">
-    <title>$R$ 获取子集 - a statistic dog</title>
+    <title>$R$ 循环 - a statistic dog</title>
     <meta name="author" content="五三模拟比英语周报更适合垫锅">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="想象一下，如果你只想研究数据中的部分数据。比如从我们的练习数据中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。">
+    <meta name="description" content="在R中，也可以使用循环语句进行结构控制。R的循环结构与其它的语法$（C++, python）$非常相似。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="$R$ 获取子集">
-<meta property="og:url" content="http://yoursite.com/2015/12/10/R-获取子集/index.html">
+<meta property="og:title" content="$R$ 循环">
+<meta property="og:url" content="http://yoursite.com/2015/12/11/R-循环/index.html">
 <meta property="og:site_name" content="a statistic dog">
-<meta property="og:description" content="想象一下，如果你只想研究数据中的部分数据。比如从我们的练习数据中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。">
-<meta property="og:updated_time" content="2015-12-11T01:33:05.000Z">
+<meta property="og:description" content="在R中，也可以使用循环语句进行结构控制。R的循环结构与其它的语法$（C++, python）$非常相似。">
+<meta property="og:updated_time" content="2015-12-11T02:16:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="$R$ 获取子集">
-<meta name="twitter:description" content="想象一下，如果你只想研究数据中的部分数据。比如从我们的练习数据中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。">
+<meta name="twitter:title" content="$R$ 循环">
+<meta name="twitter:description" content="在R中，也可以使用循环语句进行结构控制。R的循环结构与其它的语法$（C++, python）$非常相似。">
 <meta name="twitter:creator" content="@五三模拟比英语周报更适合垫锅">
     
     
@@ -192,43 +192,32 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            $R$ 获取子集
+            $R$ 循环
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Thu Dec 10 2015 22:45:03 GMT+0000">
+    <time itemprop="datePublished" content="Fri Dec 11 2015 01:54:23 GMT+0000">
 	
-		    12月 10, 2015
+		    12月 11, 2015
     	
     </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/R/">R</a>
-
-
     
 </div>
 </div>
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>想象一下，如果你只想研究数据中的部分数据。比如从我们的<a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">练习数据</a>中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。</p>
-<a id="more"></a>
-<h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_subset__u51FD_u6570"><span class="toc-text">1. subset 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u53C2_u6570_u8BF4_u660E"><span class="toc-text">参数说明</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u4F7F_u7528_5B_5D_u8868_u793A_u5B50_u96C6"><span class="toc-text">2. 使用[]表示子集</span></a></li></ol>
-<h4 id="1-_subset__u51FD_u6570"><a href="#1-_subset__u51FD_u6570" class="headerlink" title="1. <strong>subset</strong> 函数"></a>1. <strong>subset</strong> 函数</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subset(x, subset, select)</span><br></pre></td></tr></table></figure>
-<p>可以使用subset函数获取子集</p>
-<h5 id="u53C2_u6570_u8BF4_u660E"><a href="#u53C2_u6570_u8BF4_u660E" class="headerlink" title="参数说明"></a>参数说明</h5><ul>
-<li>x: 数据名/ dataframe</li>
-<li>subset: 限制条件</li>
-<li>select: 选取行或列</li>
-</ul>
-<p>比如要找出 ozone大于31且Temp大于90时, Soloar的平均值。<br>可以使用<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data&lt;-read.csv(<span class="string">"subsetdata.csv"</span>)</span><br><span class="line">summary(subset(data, Ozone&gt;<span class="number">31</span>&amp;Temp&gt;<span class="number">90</span>))</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-__u4F7F_u7528_5B_5D_u8868_u793A_u5B50_u96C6"><a href="#2-__u4F7F_u7528_5B_5D_u8868_u793A_u5B50_u96C6" class="headerlink" title="2. 使用[]表示子集"></a>2. 使用[]表示子集</h4><p>注意在一个data.frame使用[]表示一个dataframe。<br>[[]]表示vector.<br>data.frame与vector的区别：vector中的变量必须是同一数据类型。</p>
-<p>回到刚才的问题，如果想找出5月份ozone的最大值，我们可以：<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">summary(data[data$Month == <span class="number">5</span>,])</span><br></pre></td></tr></table></figure></p>
-<pre><code>data[data$Month == 5,] 表示月份等于5的子集。
-</code></pre><p>注意：这里我不用<strong>mean</strong>函数的原因是，<strong>mean</strong>函数必须是同一个数据类型。而这里数据中含有NA,使用mean函数会报错。而<strong>summary</strong>函数只会计算完整的数据类型。</p>
-<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">访问我的github下载练习数据和代码</a></p>
+            <p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br><a id="more"></a><br><h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#If__u5FAA_u73AF"><span class="toc-text">If 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-text">if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-else"><span class="toc-text">if.else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-_else_if-_else"><span class="toc-text">if. else if. else</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#For__u5FAA_u73AF"><span class="toc-text">For 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#While__u5FAA_u73AF"><span class="toc-text">While 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Repeat__u5FAA_u73AF"><span class="toc-text">Repeat 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Next_2C_Return"><span class="toc-text">Next, Return</span></a></li></ol></p>
+<h2 id="If__u5FAA_u73AF"><a href="#If__u5FAA_u73AF" class="headerlink" title="If 循环"></a>If 循环</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">If(condition)&#123;</span><br><span class="line"><span class="comment">##do something&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="if-else"><a href="#if-else" class="headerlink" title="if.else"></a>if.else</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">If(condition) &#123;</span><br><span class="line">   <span class="comment">##do something</span></span><br><span class="line">&#125;Else&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="if-_else_if-_else"><a href="#if-_else_if-_else" class="headerlink" title="if. else if. else"></a>if. else if. else</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">If(condition) &#123;</span><br><span class="line">   <span class="comment">##do something</span></span><br><span class="line">&#125;Else <span class="keyword">if</span>&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;Else&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意:else必须跟前面的<code>｝</code>在同一行。因为R语言执行程序时，每行单独执行，所以else如果在下一行，R会认为语句结束，导致报错。</p>
+<h2 id="For__u5FAA_u73AF"><a href="#For__u5FAA_u73AF" class="headerlink" title="For 循环"></a>For 循环</h2><p>for循环表示，i从1到10，依次执行。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">10</span>)&#123;</span><br><span class="line">  print(i)</span><br><span class="line">  <span class="comment">##do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="While__u5FAA_u73AF"><a href="#While__u5FAA_u73AF" class="headerlink" title="While 循环"></a>While 循环</h2><p>while循环表示在给定的条件下无限次执行，直到不符合条件停止。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&lt;- <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span>(x&lt;<span class="number">10</span>)&#123;</span><br><span class="line">  print(x)</span><br><span class="line">  x&lt;- x+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Repeat__u5FAA_u73AF"><a href="#Repeat__u5FAA_u73AF" class="headerlink" title="Repeat 循环"></a>Repeat 循环</h2><p>使用repeat创建一个无限的循环。只有执行到<strong>break</strong>循环才会停止<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repeat</span> &#123;</span><br><span class="line">        x1&lt;- x1/<span class="number">10</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(abs(x1-x0)&lt;tol)&#123;</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          x0&lt;-x1</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Next_2C_Return"><a href="#Next_2C_Return" class="headerlink" title="Next, Return"></a>Next, Return</h2><p>next表示跳过。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">10</span>) &#123; <span class="keyword">if</span>(i &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">  <span class="comment">## Skip the first 20 iterations</span></span><br><span class="line">  <span class="keyword">next</span></span><br><span class="line">&#125;</span><br><span class="line">  print(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>return表示停止循环，并返回一个值。与C++类似。</p>
+<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/3_structure" target="_blank" rel="external">来我的github查看示例代码</a></p>
 
             
                 
@@ -238,19 +227,12 @@
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/R/">R</a> <a class="tag tag--primary tag--small t-link" href="/tags/子集/">子集</a>
-
-            </div>
-        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/R-循环/"  data-tooltip="$R$ 循环">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -258,7 +240,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/readdata/" data-tooltip="如何用 $R$ 读取数据和数据交互">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/R-获取子集/" data-tooltip="$R$ 获取子集">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -273,17 +255,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -331,7 +313,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/R-循环/"  data-tooltip="$R$ 循环">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -339,7 +321,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/readdata/" data-tooltip="如何用 $R$ 读取数据和数据交互">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/10/R-获取子集/" data-tooltip="$R$ 获取子集">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -354,17 +336,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -390,17 +372,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/10/R-获取子集/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/11/R-循环/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>

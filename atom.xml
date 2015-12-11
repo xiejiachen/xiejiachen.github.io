@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-11T01:33:05.000Z</updated>
+  <updated>2015-12-11T02:16:50.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[$R$ 循环]]></title>
+    <link href="http://yoursite.com/2015/12/11/R-%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://yoursite.com/2015/12/11/R-循环/</id>
+    <published>2015-12-11T01:54:23.000Z</published>
+    <updated>2015-12-11T02:16:50.000Z</updated>
+    <content type="html"><![CDATA[<p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br><a id="more"></a><br><!-- toc --></p>
+<h2 id="If__u5FAA_u73AF"><a href="#If__u5FAA_u73AF" class="headerlink" title="If 循环"></a>If 循环</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">If(condition)&#123;</span><br><span class="line"><span class="comment">##do something&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="if-else"><a href="#if-else" class="headerlink" title="if.else"></a>if.else</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">If(condition) &#123;</span><br><span class="line">   <span class="comment">##do something</span></span><br><span class="line">&#125;Else&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="if-_else_if-_else"><a href="#if-_else_if-_else" class="headerlink" title="if. else if. else"></a>if. else if. else</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">If(condition) &#123;</span><br><span class="line">   <span class="comment">##do something</span></span><br><span class="line">&#125;Else <span class="keyword">if</span>&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;Else&#123;</span><br><span class="line">   <span class="comment">##do someting</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意:else必须跟前面的<code>｝</code>在同一行。因为R语言执行程序时，每行单独执行，所以else如果在下一行，R会认为语句结束，导致报错。</p>
+<h2 id="For__u5FAA_u73AF"><a href="#For__u5FAA_u73AF" class="headerlink" title="For 循环"></a>For 循环</h2><p>for循环表示，i从1到10，依次执行。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">10</span>)&#123;</span><br><span class="line">  print(i)</span><br><span class="line">  <span class="comment">##do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="While__u5FAA_u73AF"><a href="#While__u5FAA_u73AF" class="headerlink" title="While 循环"></a>While 循环</h2><p>while循环表示在给定的条件下无限次执行，直到不符合条件停止。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&lt;- <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span>(x&lt;<span class="number">10</span>)&#123;</span><br><span class="line">  print(x)</span><br><span class="line">  x&lt;- x+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Repeat__u5FAA_u73AF"><a href="#Repeat__u5FAA_u73AF" class="headerlink" title="Repeat 循环"></a>Repeat 循环</h2><p>使用repeat创建一个无限的循环。只有执行到<strong>break</strong>循环才会停止<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repeat</span> &#123;</span><br><span class="line">        x1&lt;- x1/<span class="number">10</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(abs(x1-x0)&lt;tol)&#123;</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          x0&lt;-x1</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Next_2C_Return"><a href="#Next_2C_Return" class="headerlink" title="Next, Return"></a>Next, Return</h2><p>next表示跳过。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">10</span>) &#123; <span class="keyword">if</span>(i &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">  <span class="comment">## Skip the first 20 iterations</span></span><br><span class="line">  <span class="keyword">next</span></span><br><span class="line">&#125;</span><br><span class="line">  print(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>return表示停止循环，并返回一个值。与C++类似。</p>
+<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/3_structure" target="_blank" rel="external">来我的github查看示例代码</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在R中，也可以使用循环语句进行结构控制。<br>R的循环结构与其它的语法$（C++, python）$非常相似。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[$R$ 获取子集]]></title>
