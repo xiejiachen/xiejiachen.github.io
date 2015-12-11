@@ -86,7 +86,7 @@
     <link href="http://yoursite.com/2015/12/10/readdata/"/>
     <id>http://yoursite.com/2015/12/10/readdata/</id>
     <published>2015-12-10T22:18:55.000Z</published>
-    <updated>2015-12-11T01:31:47.000Z</updated>
+    <updated>2015-12-11T03:45:23.000Z</updated>
     <content type="html"><![CDATA[<p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
 <!-- toc -->
 <h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
@@ -109,8 +109,8 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
 <h4 id="openfile__u53C2_u6570"><a href="#openfile__u53C2_u6570" class="headerlink" title="openfile 参数"></a>openfile 参数</h4><ul>
 <li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>
-<li>“w”覆写: 删除原来的数据， 并重新写如</li>
-<li>“a” :    在文件的最后写</li>
+<li>“w”覆写: 删除原来的数据， 并重新写入</li>
+<li>“a”追写: 在文件的最后写入</li>
 </ul>
 <p>这个语法与 python, c++类似。</p>
 <p>注意每次打开数据都要记得使用close关闭它, 因为打开以后是存储在内存中的，不关闭可能造成数据错误。</p>
