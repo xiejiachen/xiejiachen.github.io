@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-10T23:44:14.000Z</updated>
+  <updated>2015-12-11T01:33:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <link href="http://yoursite.com/2015/12/10/R-%E8%8E%B7%E5%8F%96%E5%AD%90%E9%9B%86/"/>
     <id>http://yoursite.com/2015/12/10/R-获取子集/</id>
     <published>2015-12-10T22:45:03.000Z</published>
-    <updated>2015-12-10T23:44:14.000Z</updated>
+    <updated>2015-12-11T01:33:05.000Z</updated>
     <content type="html"><![CDATA[<p>想象一下，如果你只想研究数据中的部分数据。比如从我们的<a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/2_subset" target="_blank" rel="external">练习数据</a>中找出 ozone大于31且Temp大于90时, Soloar的平均值。 或者5月份时，ozone的最大值，该怎么做？一个方法是，获取它们的子集。</p>
 <a id="more"></a>
-<h3 id="u5B50_u96C6"><a href="#u5B50_u96C6" class="headerlink" title="子集"></a>子集</h3><h4 id="1-_subset__u51FD_u6570"><a href="#1-_subset__u51FD_u6570" class="headerlink" title="1. <strong>subset</strong> 函数"></a>1. <strong>subset</strong> 函数</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subset(x, subset, select)</span><br></pre></td></tr></table></figure>
+<!-- toc -->
+<h4 id="1-_subset__u51FD_u6570"><a href="#1-_subset__u51FD_u6570" class="headerlink" title="1. <strong>subset</strong> 函数"></a>1. <strong>subset</strong> 函数</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subset(x, subset, select)</span><br></pre></td></tr></table></figure>
 <p>可以使用subset函数获取子集</p>
 <h5 id="u53C2_u6570_u8BF4_u660E"><a href="#u53C2_u6570_u8BF4_u660E" class="headerlink" title="参数说明"></a>参数说明</h5><ul>
 <li>x: 数据名/ dataframe</li>
@@ -54,8 +55,9 @@
     <link href="http://yoursite.com/2015/12/10/readdata/"/>
     <id>http://yoursite.com/2015/12/10/readdata/</id>
     <published>2015-12-10T22:18:55.000Z</published>
-    <updated>2015-12-10T23:46:37.000Z</updated>
+    <updated>2015-12-11T01:31:47.000Z</updated>
     <content type="html"><![CDATA[<p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
+<!-- toc -->
 <h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="u53C2_u6570_u8BF4_u660E_3A"><a href="#u53C2_u6570_u8BF4_u660E_3A" class="headerlink" title="<strong>参数说明</strong>:"></a><strong>参数说明</strong>:</h4><ul>
 <li>file: 文件来源，名字，链接，或计算机的存储路径</li>
@@ -72,7 +74,7 @@
 <h4 id="read-csv"><a href="#read-csv" class="headerlink" title="<strong>read.csv</strong>"></a><strong>read.csv</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv(file, header = <span class="literal">TRUE</span>, sep = <span class="string">","</span> , dec = <span class="string">"."</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="read-csv2"><a href="#read-csv2" class="headerlink" title="<strong>read.csv2</strong>"></a><strong>read.csv2</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv2(file, header = <span class="literal">TRUE</span>, sep = <span class="string">";"</span>, dec = <span class="string">","</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h2><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
+<h3 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h3><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
 <h4 id="openfile__u53C2_u6570"><a href="#openfile__u53C2_u6570" class="headerlink" title="openfile 参数"></a>openfile 参数</h4><ul>
 <li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>

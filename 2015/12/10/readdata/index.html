@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/10/readdata/index.html">
 <meta property="og:site_name" content="a statistic dog">
 <meta property="og:description" content="R自带了一些可以直接调用的函数，可以用来读取数据。如： read.table read.csv read.csv2">
-<meta property="og:updated_time" content="2015-12-10T23:46:37.000Z">
+<meta property="og:updated_time" content="2015-12-11T01:31:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用 $R$ 读取数据和数据交互">
 <meta name="twitter:description" content="R自带了一些可以直接调用的函数，可以用来读取数据。如： read.table read.csv read.csv2">
@@ -214,6 +214,7 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <p>R自带了一些可以直接调用的函数，可以用来读取数据。<br>如：<br> <strong>read.table</strong><br> <strong>read.csv</strong><br> <strong>read.csv2</strong><br><a id="more"></a></p>
+<h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#read-table"><span class="toc-text">read.table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u53C2_u6570_u8BF4_u660E_3A"><span class="toc-text">参数说明:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#read-csv"><span class="toc-text">read.csv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#read-csv2"><span class="toc-text">read.csv2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u636E_u4EA4_u4E92"><span class="toc-text">数据交互</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#openfile__u53C2_u6570"><span class="toc-text">openfile 参数</span></a></li></ol></li></ol>
 <h3 id="read-table"><a href="#read-table" class="headerlink" title="read.table"></a>read.table</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.table(file, header = <span class="literal">FALSE</span>, sep = <span class="string">""</span>, dec = <span class="string">"."</span>, colClasses = <span class="literal">NA</span>,   comment.char = <span class="string">"#"</span>, skip = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="u53C2_u6570_u8BF4_u660E_3A"><a href="#u53C2_u6570_u8BF4_u660E_3A" class="headerlink" title="<strong>参数说明</strong>:"></a><strong>参数说明</strong>:</h4><ul>
 <li>file: 文件来源，名字，链接，或计算机的存储路径</li>
@@ -230,7 +231,7 @@
 <h4 id="read-csv"><a href="#read-csv" class="headerlink" title="<strong>read.csv</strong>"></a><strong>read.csv</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv(file, header = <span class="literal">TRUE</span>, sep = <span class="string">","</span> , dec = <span class="string">"."</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="read-csv2"><a href="#read-csv2" class="headerlink" title="<strong>read.csv2</strong>"></a><strong>read.csv2</strong></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read.csv2(file, header = <span class="literal">TRUE</span>, sep = <span class="string">";"</span>, dec = <span class="string">","</span>, fill = <span class="literal">TRUE</span>, comment.char = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h2><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
+<h3 id="u6570_u636E_u4EA4_u4E92"><a href="#u6570_u636E_u4EA4_u4E92" class="headerlink" title="数据交互"></a>数据交互</h3><p>除了使用默认的function, 也可以使用一些其它的方法来让R与其它文件数据交互。<br>比如可以使用openfile：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">suibian &lt;- file(<span class="string">"readdata.csv"</span>, <span class="string">"r"</span>) </span><br><span class="line">data &lt;- read.csv(suibian) </span><br><span class="line">close(suibian)</span><br></pre></td></tr></table></figure>
 <h4 id="openfile__u53C2_u6570"><a href="#openfile__u53C2_u6570" class="headerlink" title="openfile 参数"></a>openfile 参数</h4><ul>
 <li>“r”只读: 参数’r’与<code>read.csv(&quot;readdata.csv&quot;)</code>效果相同</li>
@@ -307,7 +308,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -388,7 +389,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
