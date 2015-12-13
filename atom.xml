@@ -39,10 +39,10 @@
   
   <entry>
     <title><![CDATA[apply循环与数据类型]]></title>
-    <link href="http://www.xiejiachen.xyz/2015/12/11/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/"/>
-    <id>http://www.xiejiachen.xyz/2015/12/11/网站维护/</id>
+    <link href="http://www.xiejiachen.xyz/2015/12/11/%E5%86%85%E7%BD%AE%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/11/内置循环/</id>
     <published>2015-12-11T12:10:13.000Z</published>
-    <updated>2015-12-13T21:27:53.000Z</updated>
+    <updated>2015-12-13T21:39:52.000Z</updated>
     <content type="html"><![CDATA[<p>在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。<br><a id="more"></a><br><!-- toc --></p>
 <hr>
 <h2 id="u5185_u7F6E_u5FAA_u73AF_u51FD_u6570"><a href="#u5185_u7F6E_u5FAA_u73AF_u51FD_u6570" class="headerlink" title="内置循环函数"></a>内置循环函数</h2><h3 id="lapply_28list_apply_29_3A"><a href="#lapply_28list_apply_29_3A" class="headerlink" title="lapply(list apply):"></a>lapply(list apply):</h3><p>对列表每个元素应用函数，并返回列表。（Loop over a list and evaluate a function on each element） </p>
