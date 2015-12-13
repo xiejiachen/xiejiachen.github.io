@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.xiejiachen.xyz/"/>
-  <updated>2015-12-13T22:48:10.000Z</updated>
+  <updated>2015-12-13T23:07:39.000Z</updated>
   <id>http://www.xiejiachen.xyz/</id>
   
   <author>
@@ -19,12 +19,11 @@
     <link href="http://www.xiejiachen.xyz/2015/12/13/%E6%9E%84%E5%BB%BA%E5%87%BD%E6%95%B0/"/>
     <id>http://www.xiejiachen.xyz/2015/12/13/构建函数/</id>
     <published>2015-12-13T21:47:42.000Z</published>
-    <updated>2015-12-13T22:48:10.000Z</updated>
+    <updated>2015-12-13T23:07:39.000Z</updated>
     <content type="html"><![CDATA[<p>在R中，除了使用系统自带的(read.csv, mean等)，或者包中包含的函数(ggpl等ot)，也可以自己写入函数。通过自己写函数，可以让算法更灵活，毕竟包并不总能解决所有的问题。</p>
 <a id="more"></a>
-<blockquote class="pullquote [right]"><p>“Use your head,nut follow your heart”–Nancy Rothwell</p>
-</blockquote>
-<p>写入函数的语法，与其它语言类似，但是更简单。如果你学过C++或其它的语言,应该可以很快的上手和熟悉。</p>
+<p>写入函数的语法，与其它语言类似，但是更简单。<blockquote class="pullquote [right]"><p>“Use your head,nut follow your heart”–Nancy Rothwell</p>
+</blockquote>如果你学过C++或其它的语言,应该可以很快的上手和熟悉。</p>
 <p>比如C++写入一个加法函数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add2</span><span class="params">(<span class="keyword">int</span> a,b)</span></span>&#123;</span><br><span class="line">	x= a+b;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -40,7 +39,22 @@
 <p>调用这个函数可以找出向量x中大于n的元素啦。<br>比如，想找出1到10的整数向量中大于5的元素。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x&lt;- c(<span class="number">1</span>:<span class="number">10</span>)</span><br><span class="line">above(x,<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <hr>
-<p>熟悉了这些基本语法以后，就可以处理一些更复杂的问题。<br>我们来看两道例题(来自coursera)。</p>
+<p>熟悉了这些基本语法以后，就可以处理一些更复杂的问题。<br>我们来看两道例题(来自coursera-r-programing-prog035)。<br>先<a href="https://d396qusza40orc.cloudfront.net/rprog/data/specdata.zip" target="_blank" rel="external">下载数据</a>。</p>
+<p>数据中包含了332个CSV文件。这是美国的332个空气检车站分别收集的监测数据，比如”001.csv”表示001号监测站的观测数据.</p>
+<p>每个数据中包含了3个变量：<br>分别是：</p>
+<ul>
+<li>日期: 观测的时间</li>
+<li>sulfate: 硫化物含量</li>
+<li>nitrate: 硝酸盐含量</li>
+</ul>
+<p>现在请写两个函数：</p>
+<ol>
+<li>输入 （文件夹名称，污染物名称，机器号） 得到这些机器号的污染物的平均值</li>
+<li>输入  (文件夹名称，序列号) 得到一个二维数组包括机器号和其对应的完整数据的数量</li>
+</ol>
+<script src="https://gist.github.com/xiejiachen/885b62cc5dc5eb84eeba.js"></script>
+
+<p><a href="https://github.com/xiejiachen/R-python-codewithmyweb/tree/master/R/4_function" target="_blank" rel="external">欢迎访问我的github下载数据和代码</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在R中，除了使用系统自带的(read.csv, mean等)，或者包中包含的函数(ggpl等ot)，也可以自己写入函数。通过自己写函数，可以让算法更灵活，毕竟包并不总能解决所有的问题。</p>]]>
