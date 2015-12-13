@@ -6,22 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="a statistic dog">
-    <title>Welcome to Statistic Dog Home - a statistic dog</title>
+    <title>网站维护 - a statistic dog</title>
     <meta name="author" content="五三模拟比英语周报更适合垫锅">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。">
+    <meta name="description" content="在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Welcome to Statistic Dog Home">
-<meta property="og:url" content="http://www.xiejiachen.xyz/2015/12/11/test/index.html">
+<meta property="og:title" content="网站维护">
+<meta property="og:url" content="http://www.xiejiachen.xyz/2015/12/11/网站维护/index.html">
 <meta property="og:site_name" content="a statistic dog">
-<meta property="og:description" content="－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。">
-<meta property="og:updated_time" content="2015-12-11T23:27:40.000Z">
+<meta property="og:description" content="在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。">
+<meta property="og:updated_time" content="2015-12-13T21:24:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to Statistic Dog Home">
-<meta name="twitter:description" content="－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。">
+<meta name="twitter:title" content="网站维护">
+<meta name="twitter:description" content="在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。">
 <meta name="twitter:creator" content="@五三模拟比英语周报更适合垫锅">
     
     
@@ -29,12 +29,6 @@
         <meta property="og:image" content="/assets/images/http://tp3.sinaimg.cn/2671467802/180/5712441890/1"/>
     
     
-        <meta property="og:image" content="/2015/12/11/test/http://7xp49e.com1.z0.glb.clouddn.com/campus-centralhall-mattgrum_720x220.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://www.xiejiachen.xyz/2015/12/11/test/http://7xp49e.com1.z0.glb.clouddn.com/campus-centralhall-mattgrum_720x220.jpg" />
-    
-    
-        <meta property="og:image" content="/2015/12/11/test/campus.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://www.xiejiachen.xyz/2015/12/11/test/campus.jpg" />
     
     
     <!--STYLES-->
@@ -196,49 +190,55 @@
 </nav>
 
             
-        <div class="post-header-cover
-                    text-center
-                    "
-             style="background-image:url('/2015/12/11/test/campus.jpg');"
-             data-behavior="3">
-            
-                <div class="post-header main-content-wrap text-center">
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Welcome to Statistic Dog Home
+            网站维护
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Fri Dec 11 2015 23:27:40 GMT+0000">
+    <time itemprop="datePublished" content="Fri Dec 11 2015 12:10:13 GMT+0000">
 	
 		    12月 11, 2015
     	
     </time>
     
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/写在前面/">写在前面</a>
-
-
-    
 </div>
 </div>
-            
-        </div>
-
-            <div id="main" data-behavior="3"
-                 class="hasCover
-                        hasCoverMetaIn
-                        hasCoverCaption">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-        <span class="post-header-cover-caption caption">University of York</span>
-    
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>－－－－－－－－－－－－－－－－－写一些 $R$ 跟 $python$ 的杂文。<br><a id="more"></a></p>
+            <p>在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。<br><a id="more"></a><br><h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5185_u7F6E_u5FAA_u73AF_u51FD_u6570"><span class="toc-text">内置循环函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lapply_28list_apply_29_3A"><span class="toc-text">lapply(list apply):</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7528_u6CD5"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u53C2_u6570_u8BF4_u660E_uFF1A"><span class="toc-text">参数说明：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BD5_u7740_u8F93_u5165"><span class="toc-text">试着输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sapply_28simplify_apply_29_3A"><span class="toc-text">sapply(simplify apply):</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7528_u6CD5-1"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BD5_u7740_u8F93_u5165-1"><span class="toc-text">试着输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mapply_28multi_list_apply_29_3A"><span class="toc-text">mapply(multi list apply):</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7528_u6CD5-2"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BD5_u7740_u8F93_u5165-2"><span class="toc-text">试着输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apply_3A"><span class="toc-text">apply:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7528_u6CD5-3"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BD5_u7740_u8F93_u5165-3"><span class="toc-text">试着输入</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B_u7684_u533A_u522B_uFF1A"><span class="toc-text">数据类型的区别：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vector__u5411_u91CF_uFF1A"><span class="toc-text">vector 向量：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matrix__u77E9_u9635_uFF1A"><span class="toc-text">matrix 矩阵：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#data-frame__u6570_u636E_u6846_3A"><span class="toc-text">data.frame 数据框:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list__u5217_u8868_uFF1A"><span class="toc-text">list 列表：</span></a></li></ol></li></ol></p>
+<hr>
+<h2 id="u5185_u7F6E_u5FAA_u73AF_u51FD_u6570"><a href="#u5185_u7F6E_u5FAA_u73AF_u51FD_u6570" class="headerlink" title="内置循环函数"></a>内置循环函数</h2><h3 id="lapply_28list_apply_29_3A"><a href="#lapply_28list_apply_29_3A" class="headerlink" title="lapply(list apply):"></a>lapply(list apply):</h3><p>对列表每个元素应用函数，并返回列表。（Loop over a list and evaluate a function on each element） </p>
+<h4 id="u7528_u6CD5"><a href="#u7528_u6CD5" class="headerlink" title="用法"></a>用法</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapply (X, FUN, <span class="keyword">...</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="u53C2_u6570_u8BF4_u660E_uFF1A"><a href="#u53C2_u6570_u8BF4_u660E_uFF1A" class="headerlink" title="参数说明："></a>参数说明：</h4><p>X表示列表，FUN函数， …给函数返回的参数值</p>
+<h4 id="u8BD5_u7740_u8F93_u5165"><a href="#u8BD5_u7740_u8F93_u5165" class="headerlink" title="试着输入"></a>试着输入</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data1= lapply(<span class="number">1</span>:<span class="number">3</span>, <span class="keyword">function</span>(i) c(<span class="number">1</span>:<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>返回一个包含三个列表的<strong>列表</strong>，每个列表都包含元素1和2。</p>
+<h3 id="sapply_28simplify_apply_29_3A"><a href="#sapply_28simplify_apply_29_3A" class="headerlink" title="sapply(simplify apply):"></a>sapply(simplify apply):</h3><p>lapply的一个变种，尽可能简化lapply。但是如果它不知道该怎么简时，它会什么也不做，直接返回一个list。(Same as lapply but to simplify the result)</p>
+<h4 id="u7528_u6CD5-1"><a href="#u7528_u6CD5-1" class="headerlink" title="用法"></a>用法</h4><pre><code>sapply (X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)
+</code></pre><h4 id="u8BD5_u7740_u8F93_u5165-1"><a href="#u8BD5_u7740_u8F93_u5165-1" class="headerlink" title="试着输入"></a>试着输入</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2= sapply(<span class="number">1</span>:<span class="number">3</span>, <span class="keyword">function</span>(i) c(<span class="number">1</span>:<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>返回了一个2行3列的数据框</p>
+<h3 id="mapply_28multi_list_apply_29_3A"><a href="#mapply_28multi_list_apply_29_3A" class="headerlink" title="mapply(multi list apply):"></a>mapply(multi list apply):</h3><p>把函数应用到对象(multivariate version of lapply)</p>
+<h4 id="u7528_u6CD5-2"><a href="#u7528_u6CD5-2" class="headerlink" title="用法"></a>用法</h4><pre><code>mapply (FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, 
+USE.NAMES = TRUE)  
+</code></pre><h4 id="u8BD5_u7740_u8F93_u5165-2"><a href="#u8BD5_u7740_u8F93_u5165-2" class="headerlink" title="试着输入"></a>试着输入</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data3= mapply( <span class="keyword">function</span>(i) c(<span class="number">1</span>:<span class="number">2</span>), <span class="number">1</span>:<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>也返回了一个2行3列的数据框，要先写函数。因为默认simplify=true,如果你想要像lapply一样得到一个列表    ，只要让SIMPLIFY=FALSE即可<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data4list= mapply( <span class="keyword">function</span>(i) c(<span class="number">1</span>:<span class="number">2</span>), <span class="number">1</span>:<span class="number">3</span>, SIMPLIFY = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="apply_3A"><a href="#apply_3A" class="headerlink" title="apply:"></a>apply:</h3><p>对有维度的数组的边进行操作,常常用来对矩阵的行或者列计算apply a function over the margins of an arry.</p>
+<h4 id="u7528_u6CD5-3"><a href="#u7528_u6CD5-3" class="headerlink" title="用法"></a>用法</h4><pre><code>apply (X, MARGIN, FUN, ...)
+</code></pre><h4 id="u8BD5_u7740_u8F93_u5165-3"><a href="#u8BD5_u7740_u8F93_u5165-3" class="headerlink" title="试着输入"></a>试着输入</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x&lt;-matrix(rnorm(<span class="number">200</span>),<span class="number">20</span>,<span class="number">10</span>)</span><br><span class="line">apply(x,<span class="number">1</span>,mean)</span><br><span class="line">apply(x,<span class="number">2</span>,mean)</span><br></pre></td></tr></table></figure>
+<h2 id="u6570_u636E_u7C7B_u578B_u7684_u533A_u522B_uFF1A"><a href="#u6570_u636E_u7C7B_u578B_u7684_u533A_u522B_uFF1A" class="headerlink" title="数据类型的区别："></a>数据类型的区别：</h2><h3 id="vector__u5411_u91CF_uFF1A"><a href="#vector__u5411_u91CF_uFF1A" class="headerlink" title="vector 向量："></a>vector 向量：</h3><p>一维向量，只能包含同种类型元素</p>
+<h3 id="matrix__u77E9_u9635_uFF1A"><a href="#matrix__u77E9_u9635_uFF1A" class="headerlink" title="matrix 矩阵："></a>matrix 矩阵：</h3><p>二维，只能包含同种类型元素</p>
+<h3 id="data-frame__u6570_u636E_u6846_3A"><a href="#data-frame__u6570_u636E_u6846_3A" class="headerlink" title="data.frame 数据框:"></a>data.frame 数据框:</h3><p>可以包含不同类型元素，而且可以给每列命名，并可以使用framename[colname]调出列。使用read.csv read.table之类的函数得到的数据就储存在数据框里</p>
+<h3 id="list__u5217_u8868_uFF1A"><a href="#list__u5217_u8868_uFF1A" class="headerlink" title="list 列表："></a>list 列表：</h3><p>列表的每个元素可以是任何，可以是向量，可以是矩阵，可以是数据框，甚至可以是列表。在Rstudio里右上角的环境区，用鼠标点击 data3跟data4观察list与dataframe的区别</p>
 
             
                 
@@ -248,19 +248,12 @@
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/University-of-York/">University of York</a> <a class="tag tag--primary tag--small t-link" href="/tags/约克大学/">约克大学</a> <a class="tag tag--primary tag--small t-link" href="/tags/网站介绍/">网站介绍</a>
-
-            </div>
-        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/13/r/"  data-tooltip="r">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/test/"  data-tooltip="Welcome to Statistic Dog Home">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -268,7 +261,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/网站维护/" data-tooltip="网站维护">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/R-循环/" data-tooltip="$R$ 循环">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -283,17 +276,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -306,7 +299,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -341,7 +334,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/13/r/"  data-tooltip="r">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/test/"  data-tooltip="Welcome to Statistic Dog Home">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -349,7 +342,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/网站维护/" data-tooltip="网站维护">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/11/R-循环/" data-tooltip="$R$ 循环">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -364,17 +357,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -387,7 +380,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -400,17 +393,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/test/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.xiejiachen.xyz/2015/12/11/网站维护/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
