@@ -4,7 +4,7 @@
   <subtitle><![CDATA[路漫漫其修远兮，吾将上下而迷路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.xiejiachen.xyz/"/>
-  <updated>2015-12-11T23:27:40.000Z</updated>
+  <updated>2015-12-13T22:48:10.000Z</updated>
   <id>http://www.xiejiachen.xyz/</id>
   
   <author>
@@ -13,6 +13,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[构建函数]]></title>
+    <link href="http://www.xiejiachen.xyz/2015/12/13/%E6%9E%84%E5%BB%BA%E5%87%BD%E6%95%B0/"/>
+    <id>http://www.xiejiachen.xyz/2015/12/13/构建函数/</id>
+    <published>2015-12-13T21:47:42.000Z</published>
+    <updated>2015-12-13T22:48:10.000Z</updated>
+    <content type="html"><![CDATA[<p>在R中，除了使用系统自带的(read.csv, mean等)，或者包中包含的函数(ggpl等ot)，也可以自己写入函数。通过自己写函数，可以让算法更灵活，毕竟包并不总能解决所有的问题。</p>
+<a id="more"></a>
+<blockquote class="pullquote [right]"><p>“Use your head,nut follow your heart”–Nancy Rothwell</p>
+</blockquote>
+<p>写入函数的语法，与其它语言类似，但是更简单。如果你学过C++或其它的语言,应该可以很快的上手和熟悉。</p>
+<p>比如C++写入一个加法函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add2</span><span class="params">(<span class="keyword">int</span> a,b)</span></span>&#123;</span><br><span class="line">	x= a+b;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>int表示返回的数据值类型</li>
+<li>add2表示函数名称</li>
+<li>int (a,b）表示需要的参数。</li>
+</ul>
+<p> 同样的，在 R里也可以写一个类似的加法函数。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add2 &lt;- <span class="keyword">function</span>(x,y)&#123;</span><br><span class="line">       x+y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>试试用    <code>add2(1+2)</code> 来调用它吧</p>
+<p>又或者，你可以写一个函数来找出向量中的一些特定数值。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">above&lt;- <span class="keyword">function</span>(x,n)&#123;</span><br><span class="line">        use&lt;- x&gt;n</span><br><span class="line">        x[use]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用这个函数可以找出向量x中大于n的元素啦。<br>比如，想找出1到10的整数向量中大于5的元素。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x&lt;- c(<span class="number">1</span>:<span class="number">10</span>)</span><br><span class="line">above(x,<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>熟悉了这些基本语法以后，就可以处理一些更复杂的问题。<br>我们来看两道例题(来自coursera)。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在R中，除了使用系统自带的(read.csv, mean等)，或者包中包含的函数(ggpl等ot)，也可以自己写入函数。通过自己写函数，可以让算法更灵活，毕竟包并不总能解决所有的问题。</p>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Welcome to Statistic Dog Home]]></title>
@@ -42,7 +77,7 @@
     <link href="http://www.xiejiachen.xyz/2015/12/11/%E5%86%85%E7%BD%AE%E5%BE%AA%E7%8E%AF/"/>
     <id>http://www.xiejiachen.xyz/2015/12/11/内置循环/</id>
     <published>2015-12-11T12:10:13.000Z</published>
-    <updated>2015-12-13T21:39:52.000Z</updated>
+    <updated>2015-12-13T21:46:20.000Z</updated>
     <content type="html"><![CDATA[<p>在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。<br><a id="more"></a><br><!-- toc --></p>
 <hr>
 <h2 id="u5185_u7F6E_u5FAA_u73AF_u51FD_u6570"><a href="#u5185_u7F6E_u5FAA_u73AF_u51FD_u6570" class="headerlink" title="内置循环函数"></a>内置循环函数</h2><h3 id="lapply_28list_apply_29_3A"><a href="#lapply_28list_apply_29_3A" class="headerlink" title="lapply(list apply):"></a>lapply(list apply):</h3><p>对列表每个元素应用函数，并返回列表。（Loop over a list and evaluate a function on each element） </p>
@@ -71,6 +106,12 @@ USE.NAMES = TRUE)
     <![CDATA[<p>在R中，除了前面提到的通用循环结构。也可以使用R内置的一些的循环函数 。这些循环函数可以大大简化代码量，使得代码清晰易懂。<br>]]>
     
     </summary>
+    
+      <category term="R" scheme="http://www.xiejiachen.xyz/tags/R/"/>
+    
+      <category term="循环" scheme="http://www.xiejiachen.xyz/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+      <category term="R" scheme="http://www.xiejiachen.xyz/categories/R/"/>
     
   </entry>
   
